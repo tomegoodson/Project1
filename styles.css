@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Minimum height to cover the full viewport height */
+    margin: 0; /* Remove default margin */
+    /* No background image set here */
+}
+
+/* Styles for containers within the application */
+.container {
+    background-color: #fff; /* White background for the container */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    width: 300px; /* Fixed width for the container */
+    text-align: center; /* Center text inside the container */
+    position: relative; /* Positioned relative to its normal position */
+    z-index: 2; /* Stack order, higher values are in front of lower values */
+}
+
+/* Styles for the login form */
+.login-form {
+    margin-bottom: 20px; /* Space below the login form */
+}
+
+/* Styles for input groups within the form */
+.input-group {
+    margin-bottom: 15px; /* Space below each input group */
+}
+
+/* Common styles for text and password inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width of the parent container */
+    padding: 8px; /* Padding inside the input fields */
+    border: 1px solid #ccc; /* Light grey border around the inputs */
+    border-radius: 5px; /* Rounded corners for the inputs */
+}
+
+/* Styles for buttons */
+button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #4caf50; /* Green background color */
+    color: #fff; /* White text color */
+    border: none; /* No border for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styles for buttons on hover */
+button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Styles for containers with a background image */
+.background-image-container {
+    background-image: url('background.png'); /* Background image for the container */
+    background-size: cover; /* Cover the entire container with the image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    min-height: 100vh; /* Minimum height to cover the full viewport height */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally in the flex container */
+    align-items: center; /* Center vertically in the flex container */
+}
