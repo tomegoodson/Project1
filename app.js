@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Directly display these containers without login
     recipeContainer.style.display = "block";
-    instructionContainer.style.display = "block";
     restaurantContainer.style.display = 'block';
 
     // Set the background image for the containers
@@ -14,11 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     recipeContainer.style.backgroundSize = "cover";
     recipeContainer.style.backgroundPosition = "center";
     recipeContainer.style.backgroundRepeat = "no-repeat";
-
-    instructionContainer.style.backgroundImage = "url('instructions.jpg')";
-    instructionContainer.style.backgroundSize = "cover";
-    instructionContainer.style.backgroundPosition = "center";
-    instructionContainer.style.backgroundRepeat = "no-repeat";
 
     // Set the background image for the page
     document.body.style.backgroundImage = "url('background.png')";
@@ -109,50 +103,55 @@ async function findPlaces() {
         }
     });
 
-    // Function to fetch recipes based on the search term
-    async function fetchRecipes(apiUrl, targetElement) {
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data = await response.json();
-            displayRecipes(data.results, targetElement);
-        } catch (error) {
-            console.error('Error fetching recipes:', error);
+// Function to fetch recipes based on the search term
+async function fetchRecipes(apiUrl, targetElement) {
+    try {
+        const urlWithDetails = `${apiUrl}&addRecipeInformation=true`;
+        const response = await fetch(urlWithDetails);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
+        const data = await response.json();
+        displayRecipes(data.results, targetElement);
+    } catch (error) {
+        console.error('Error fetching recipes:', error);
+    }
+}
+// Function to display recipes in the UI
+function displayRecipes(recipes, targetElement) {
+    targetElement.innerHTML = ''; // Clear existing content
+
+    // Display each recipe
+    recipes.forEach(recipe => {
+        const recipeCard = createRecipeCard(recipe);
+        targetElement.appendChild(recipeCard);
+    });
+}
+
+// Function to create a card element for each recipe
+function createRecipeCard(recipe) {
+    const recipeCard = document.createElement('div');
+    recipeCard.classList.add('recipe-card');
+
+    const title = document.createElement('h2');
+    title.textContent = recipe.title;
+
+    const image = document.createElement('img');
+    image.src = recipe.image;
+    image.alt = recipe.title;
+
+    recipeCard.appendChild(title);
+    recipeCard.appendChild(image);
+
+    // Check if detailed instructions are available and append them
+    if (recipe.instructions) {
+        const instructions = document.createElement('p');
+        instructions.textContent = recipe.instructions;
+        recipeCard.appendChild(instructions);
     }
 
-    // Function to display recipes in the UI
-    function displayRecipes(recipes, targetElement) {
-        targetElement.innerHTML = ''; // Clear existing content
-    
-        // Limit the display to the first 3 recipes
-        const limitedRecipes = recipes.slice(0, 3);
-    
-        limitedRecipes.forEach(recipe => {
-            const recipeCard = createRecipeCard(recipe);
-            targetElement.appendChild(recipeCard);
-        });
-    }
-
-    // Function to create a card element for each recipe
-    function createRecipeCard(recipe) {
-        const recipeCard = document.createElement('div');
-        recipeCard.classList.add('recipe-card');
-
-        const title = document.createElement('h2');
-        title.textContent = recipe.title;
-
-        const image = document.createElement('img');
-        image.src = recipe.image;
-        image.alt = recipe.title;
-
-        recipeCard.appendChild(title);
-        recipeCard.appendChild(image);
-
-        return recipeCard;
-    }
+    return recipeCard;
+}
 
     // Setup for fetching analyzed instructions for a recipe
     const instructionBtn = document.getElementById('instructionBtn');
@@ -168,8 +167,7 @@ async function findPlaces() {
                 console.error('Instruction input element not found');
             }
         });
-    } else {
-        console.error('Instruction button element not found');
+
     }
 
     // Function to fetch and display analyzed instructions for a given recipe ID
@@ -187,27 +185,8 @@ async function findPlaces() {
         }
     }
 
-    // Function to display analyzed instructions in the UI
-    function displayAnalyzedInstructions(instructions, targetElement) {
-        targetElement.innerHTML = '';
-        instructions.forEach((instructionSet) => {
-            instructionSet.steps.forEach((step, index) => {
-                const stepElement = document.createElement('div');
-                stepElement.classList.add('recipe-step');
-
-                const stepNumber = document.createElement('h3');
-                stepNumber.textContent = `Step ${index + 1}:`;
-
-                const stepDescription = document.createElement('p');
-                stepDescription.textContent = step.step;
-
-                stepElement.appendChild(stepNumber);
-                stepElement.appendChild(stepDescription);
-
-                targetElement.appendChild(stepElement);
-            });
-        });
-    } // Ensure this function is properly closed
+    
+     // Ensure this function is properly closed
 
     function initMap() {
         // Create the map centered on the user's location
@@ -230,14 +209,4 @@ async function findPlaces() {
     }
     
 
-    // Set background images for specific containers
-    recipeContainer.style.backgroundImage = "url('search.jpg')";
-    recipeContainer.style.backgroundSize = "cover";
-    recipeContainer.style.backgroundPosition = "center";
-    recipeContainer.style.backgroundRepeat = "no-repeat";
-
-    instructionContainer.style.backgroundImage = "url('instructions.jpg')";
-    instructionContainer.style.backgroundSize = "cover";
-    instructionContainer.style.backgroundPosition = "center";
-    instructionContainer.style.backgroundRepeat = "no-repeat";
-
+   

@@ -2,9 +2,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Minimum height to cover the full viewport height */
-    margin: 0; /* Remove default margin */
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* Styles for containers within the application */
 .container {
@@ -130,48 +135,6 @@ button:hover {
 }
 
 
-#instruction-container {
-    position: absolute;
-    top: 20px;
-    left: 1420px; /* Adjusted to prevent overlap with recipe-container */
-    display: none; /* or display: block to make it visible for testing */
-    width: 350px;
-    height: 140px; /* Ensure this is enough to display the contents */
-    background-image: url('instructions.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1; /* Ensure the container is behind the input and button */
-}
 
-#instruction-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('instructions.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.5; /* Adjust the opacity to see the cover effect underneath */
-    z-index: -1; /* Place the pseudo-element behind the container content */
-}
 
-#instruction-container input,
-#instruction-container button {
-    z-index: 2; /* Ensure these elements are above the pseudo-element */
-    position: relative; /* Needed to make z-index take effect */
-}
-#instruction-container button {
-    margin-top: 5px; /* Adjust this value as needed to move the button down */
-    z-index: 2; 
-    position: relative;
-    padding: 10px 20px;
-    background-color: #4caf50; /* Green background color */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
