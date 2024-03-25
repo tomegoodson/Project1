@@ -13,32 +13,28 @@
     </style>
 </head>
 <body>
-    <!-- Login Container: Contains the login form -->
-    <div class="container" id="login-container">
-        <form class="login-form" id="login-form">
-            <h2><img src="chefhat.png" alt="Login" style="width: 150px; border-radius: 10px;"></h2> <!-- Logo or image for the login form -->
-            <div class="input-group">
-                <label for="username">Username</label> <!-- Username field -->
-                <input type="text" id="username" name="username" value="Chef" required autocomplete="username">
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label> <!-- Password field -->
-                <input type="password" id="password" name="password" value="Password1" required autocomplete="current-password">
-            </div>
-            <button type="submit">Sign In</button> <!-- Login button -->
-        </form>
-    </div>
+    
 
+    <div class="container" id="restaurant-container" style="position: absolute;">
+        <h1>Nearby Grocery Stores</h1>
+        <input type="text" id="restaurantSearchInput" placeholder="Search for Grocery Stores (e.g., Kroger)">
+        <button id="restaurantSearchBtn">Search</button>
+        <div id="map" style="width: 50px; height: 1px;"></div>
+        <div id="restaurantList" class="restaurant-list"></div>
+    </div>
+    
     <!-- Recipe Container: Hidden by default and shown after successful login -->
-    <div class="container" id="recipe-container" style="position: absolute; top: 20px; left: 800px; display: none;">
+    <div class="container" id="recipe-container" style="position: absolute;">
         <h1>Recipe Search</h1>
         <input type="text" id="searchInput" placeholder="Enter keywords or ingredients"> <!-- Search input for recipes -->
         <button id="searchBtn">Search</button> <!-- Button to trigger recipe search -->
         <div id="recipeList" class="recipe-list"></div> <!-- Container to display search results -->
     </div>
 
+
+
     <!-- Instruction Container: Also hidden by default, for displaying detailed recipe instructions -->
-    <div class="container" id="instruction-container" style="position: absolute; top: 20px; left: 1150px; display: none;">
+    <div class="container" id="instruction-container" style="position: absolute;">
         <h1>Recipe Instructions</h1>
         <input type="text" id="instructionInput" placeholder="Enter Recipe ID"> <!-- Input for recipe ID to fetch instructions -->
         <button id="instructionBtn">Get Instructions</button> <!-- Button to fetch and display instructions -->
