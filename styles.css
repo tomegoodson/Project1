@@ -65,15 +65,19 @@ button:hover {
 }
 
 #restaurant-container {
-    background-image: url('store1.png');    padding: 20px; /* Padding inside the container */
+    background-image: url('store1.png');
+    padding: 20px; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners for the container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
     width: 350px; /* Width for the container */
+    height: 450px;
     position: absolute; /* Absolute positioning */
-    bottom: 20px; /* Position from the bottom */
+    bottom: 10px; /* Position from the bottom */
     left: 20px; /* Position from the left */
     display: block; /* Change to 'none' to hide initially */
     background-repeat: no-repeat; /* Do not repeat the background image */
+    background-size: cover; /* Ensure the image covers the whole container */
+    background-position: center; /* Center the background image */
 }
 
 #restaurant-container button {
@@ -134,7 +138,10 @@ button:hover {
     cursor: pointer;
 }
 
-
-
-
-
+#map {
+    width: 100%; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    margin: 10px auto; /* Center the map horizontally with top and bottom margin */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
