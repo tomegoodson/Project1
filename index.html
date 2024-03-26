@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search</title>
+    <title>Recipe App</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        h1 {
-            color: white;
-        }
-    </style>
 </head>
 <body>
-    <div class="container" id="recipe-container">
-        <h1>Recipe Search</h1>
-        <input type="text" id="searchInput" placeholder="Enter keywords or ingredients">
-        <button id="searchBtn">Search</button>
-        <div id="recipeList" class="recipe-list"></div>
-    </div>
-
-    <div class="container" id="restaurant-container">
-        <h1>Nearby Grocery Stores</h1>
-        <input type="text" id="storeInput" placeholder="Search for Grocery Stores (e.g., Kroger)">
-        <button id="restaurantSearchBtn">Search</button>
-        <div id="map" style="width: 300px; height: 300px;"></div>
-        <div id="restaurantList" class="restaurant-list"></div>
-    </div>
-
-    <!-- Include Google Maps API script with your API key and callback function -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l4i-KKGowSRy6O3Jx5v66teva_Eni6c&libraries=places&callback=initMap">
-    </script>
-    <script src="app.js"></script>
+    <section>
+        <div class="container initial">
+            <h1 class="brand">Recipe Ideas</h1>
+            <div class="search-bar"></div>
+            <form id="recipeForm">
+                <input type="text" id="recipeInput" placeholder="Search for Recipe Ideas">
+                <ion-icon name="search"></ion-icon>
+                <button type="submit"><ion-icon name="search"></ion-icon></button> <!-- Added submit button -->
+            </form>
+            <div class="search-result"></div>
+        </div>
+        <div class="container" id="restaurant-container">
+            <h1>Nearby Grocery Stores</h1>
+            <input type="text" id="storeInput" placeholder="Search for Grocery Stores (e.g., Kroger)">
+            <button id="restaurantSearchBtn">Search</button> <!-- Added button for searching nearby stores -->
+            <div id="map" style="width: 300px; height: 300px;"></div>
+            <div id="restaurantList" class="restaurant-list"></div>
+        </div>
+    </section>
+    <!-- Include Google Maps API with Places library -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l4i-KKGowSRy6O3Jx5v66teva_Eni6c&libraries=places&callback=initMap"></script>
+    <script src="index.js"></script>
 </body>
 </html>
