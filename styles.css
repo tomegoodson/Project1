@@ -1,119 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Rubik+Scribble&display=swap');
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-image: url('background.png');
-    background-size:  100% auto; /* Make the background image wider */
-    background-position: center top;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('background.png');
+  background-size: 100% auto; /* Make the background image wider */
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+html{
+  font-family: 'Pacifico', sans-serif;
+  font-size: 12px;
 }
 
 .brand {
-    font-size: 2rem;
-    color: black;
-    font-style: italic;
-    position: absolute;
-  top: 30%;
+  font-size: 2rem;
+  color: black;
+  font-style: italic;
+  position: absolute;
+  top: 40%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 30px;
+}
+
+.recipe.form {
+  position: absolute;
+  top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
-    margin-bottom: 30px;
-  }
-  .recipe.form {
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-  }
-  
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    position: absolute; 
-    left: 20;
-    bottom: 0;
-    margin-left: 20px; /* Adjust margin as needed */
-    margin-bottom: 20px; /* Adjust margin as needed */
-  }
-  
-  .search-bar input {
-    width: calc(100% - 40px); /* Adjust width based on button and margin */
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    background-color: rgb(240, 16, 16);
-  }
-  
-  .search-bar button {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(223, 223, 223);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .search-result {
-    margin-top: 850px;
-    width: 100%;
-    display: grid;
-    grid-gap: 25px;
-    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
-    position: absolute;
-    top: 0%;
-    right: -1%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  bottom: 0px;
+  margin-left: 20px; /* Adjust margin as needed */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.search-bar input {
+  width: calc(100% - 40px); /* Adjust width based on button and margin */
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background-color: rgb(240, 16, 16);
+}
+
+.search-bar button {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(223, 223, 223);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-result {
+  margin-top: 850px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+  position: absolute;
+  top: 0%;
+  right: -1%;
   background-image: url('photo-food-art.jpg');
-  background-size:cover;
+  background-size: cover;
   background-position: center;
 }
 
-.recipeInput {
+.recipe-input {
   position: absolute;
   bottom: 20px; /* Adjust the bottom value as needed */
-  left: 70px; /* Adjust the left value as needed */
+  left: 50px; /* Adjust the left value as needed */
 }
-  
-  
 
 /* Additional styles for zooming out the background */
 @media (min-width: 1200px) {
-    body {
-        background-size: 80%; /* Adjust the percentage as needed to zoom out */
-    }
+  body {
+    background-size: 100%; /* Adjust the percentage as needed to zoom out */
+  }
 }
 
 @media (min-width: 1600px) {
-    body {
-        background-size: 70%; /* Further zoom out for larger screens */
-    }
+  body {
+    background-size: 70%; /* Further zoom out for larger screens */
+  }
 }
+
 #restaurant-container {
-  padding: 10px; /* Padding inside the container */
+  padding: 20px; /* Padding inside the container */
   border-radius: 10px; /* Rounded corners for the container */
   box-shadow: 0 2px 4px rgba(236, 240, 242, 0.1); /* Subtle shadow for 3D effect */
   width: 350px; /* Width for the container */
   height: 350px;
-  color: whitesmoke;
   position: absolute; /* Absolute positioning */
   position: absolute;
   top: 0px;
-  left: 40px;
+  left: 20px;
   display: block; /* Change to 'none' to hide initially */
   background-repeat: no-repeat; /* Do not repeat the background image */
   background-size: cover; /* Ensure the image covers the whole container */
   background-position: center; /* Center the background image */
 }
 
+.recipe.form {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translate(-50%, -50%);
+}
 
 #restaurant-container button {
-    margin-top: 8px; /* Adjust this value as needed to move the button down */
-    z-index: 2; 
-    position: relative;
-    padding: 10px 20px;
+  margin-top: 8px; /* Adjust this value as needed to move the button down */
+  z-index: 2;
+  position: relative;
+  padding: 10px;
     background-color: #4caf50; /* Green background color */
     color: #0e0d0d; /* White text color */
     border: none;
@@ -121,7 +132,3 @@ body {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4ed7e74e10e842376ea6405f96cfa578a36de4b3
