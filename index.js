@@ -17,7 +17,7 @@ searchForm.addEventListener("submit", (e) => {
     fetchAPI(); 
 });
 
-// Asynchronous function to fetch data from API
+// Asynchronous function to fetch data from Edamam API, daily click rate of 100
 async function fetchAPI() {
     const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`; // API endpoint URL
     const response = await fetch(baseURL); 
@@ -26,7 +26,7 @@ async function fetchAPI() {
     console.log(data); // Logging the API response 
 }
 
-// Function to generate HTML content based on API results
+// Function to generate HTML content based on the API results
 function generateHTML(results) {
     container.classList.remove("initial"); // Removing the 'initial' class from the container 
     let generatedHTML = ""; // Starting w/ an empty HTML string
@@ -116,7 +116,7 @@ function processSearchResults(results, status) {
     }
 }
 
-
+// Function to get the User's location info
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
