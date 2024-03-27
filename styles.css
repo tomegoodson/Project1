@@ -11,14 +11,29 @@ body {
 }
 
 .brand {
-    font-size: 4rem;
-    color: whitesmoke;
+    font-size: 2rem;
+    color: black;
+    font-style: italic;
+    position: absolute;
+  top: 30%;
+  left: 55%;
+  transform: translate(-50%, -50%);
     margin-bottom: 30px;
   }
+  .recipe.form {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+  
   
   .search-bar {
     display: flex;
     align-items: center;
+    position: absolute; 
+    left: 20;
+    bottom: 0;
     margin-left: 20px; /* Adjust margin as needed */
     margin-bottom: 20px; /* Adjust margin as needed */
   }
@@ -30,7 +45,7 @@ body {
     border: none;
     outline: none;
     font-size: 2rem;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(240, 16, 16);
   }
   
   .search-bar button {
@@ -43,12 +58,25 @@ body {
   }
   
   .search-result {
-    margin-top: 400px;
+    margin-top: 850px;
     width: 100%;
     display: grid;
     grid-gap: 25px;
     grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+    position: absolute;
+    top: 0%;
+    right: -1%;
+  background-image: url('photo-food-art.jpg');
+  background-size:cover;
+  background-position: center;
+  
   }
+.recipe-input {
+  position: absolute;
+  bottom: 20px; /* Adjust the bottom value as needed */
+  left: 50px; /* Adjust the left value as needed */
+}
+  
   
 
 /* Additional styles for zooming out the background */
@@ -64,36 +92,48 @@ body {
     }
 }
 #restaurant-container {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
     justify-content: start; /* Align items to the start of the container */
     
     background-image: url('store1.png');
+=======
+>>>>>>> 4ed7e74e10e842376ea6405f96cfa578a36de4b3
     padding: 20px; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners for the container */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    box-shadow: 0 2px 4px rgba(236, 240, 242, 0.1); /* Subtle shadow for 3D effect */
     width: 350px; /* Width for the container */
     height: 350px;
     position: absolute; /* Absolute positioning */
-    top: 160px; /* Position from the bottom */
-    right: 200px; /* Position from the left */
+    position: absolute;
+    top: 0;
+    left: 170px;
     display: block; /* Change to 'none' to hide initially */
     background-repeat: no-repeat; /* Do not repeat the background image */
     background-size: cover; /* Ensure the image covers the whole container */
     background-position: center; /* Center the background image */
 }
-
+.recipe.form {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translate(-50%, -50%);
+}
 #restaurant-container button {
     margin-top: 8px; /* Adjust this value as needed to move the button down */
     z-index: 2; 
     position: relative;
     padding: 10px 20px;
     background-color: #4caf50; /* Green background color */
-    color: #fff; /* White text color */
+    color: #0e0d0d; /* White text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4ed7e74e10e842376ea6405f96cfa578a36de4b3
