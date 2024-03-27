@@ -13,21 +13,21 @@
             <div class="search-bar"></div>
             <form id="recipeForm">
                 <input type="text" id="recipeInput" placeholder="Search for Recipe Ideas">
-                <ion-icon name="search"></ion-icon>
-                <button type="submit"><ion-icon name="search"></ion-icon></button> <!-- Added submit button -->
+                <button type="submit"><ion-icon name="search"></ion-icon></button> 
             </form>
             <div class="search-result"></div>
         </div>
+        <!-- Need to change "restaurant-container name, but leave for now"-->
         <div class="container" id="restaurant-container">
             <h1>Nearby Grocery Stores</h1>
             <input type="text" id="storeInput" placeholder="Search for Grocery Stores (e.g., Kroger)">
-            <button id="restaurantSearchBtn">Search</button> <!-- Added button for searching nearby stores -->
+            <button id="restaurantSearchBtn">Search</button>
             <div id="map" style="width: 300px; height: 300px;"></div>
             <div id="restaurantList" class="restaurant-list"></div>
         </div>
     </section>
-    <!-- Include Google Maps API with Places library -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l4i-KKGowSRy6O3Jx5v66teva_Eni6c&libraries=places&callback=initMap"></script>
+    <!-- Google maps API w/ Places library, google documents told to place here -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5l4i-KKGowSRy6O3Jx5v66teva_Eni6c&libraries=places&callback=initMap"></script>
     <script src="index.js"></script>
 </body>
 </html>

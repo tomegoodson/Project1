@@ -64,6 +64,11 @@ body {
     }
 }
 #restaurant-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: start; /* Align items to the start of the container */
+    
     background-image: url('store1.png');
     padding: 20px; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners for the container */
@@ -90,3 +95,5 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
