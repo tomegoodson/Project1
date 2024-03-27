@@ -19,7 +19,7 @@ html{
 
 .brand {
   font-size: 2rem;
-  color: black;
+  color: maroon;
   font-style: italic;
   position: absolute;
   top: 40%;
@@ -103,6 +103,7 @@ html{
   box-shadow: 0 2px 4px rgba(236, 240, 242, 0.1); /* Subtle shadow for 3D effect */
   width: 350px; /* Width for the container */
   height: 350px;
+  color:blanchedalmond;
   position: absolute; /* Absolute positioning */
   position: absolute;
   top: 0px;
