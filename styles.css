@@ -22,8 +22,8 @@ html{
   color: maroon;
   font-style: italic;
   position: absolute;
-  top: 40%;
-  left: 56%;
+  top: 370px;
+  left: 950px;
   transform: translate(-50%, -50%);
   margin-bottom: 30px;
 }
