@@ -69,12 +69,12 @@ body {
   background-image: url('photo-food-art.jpg');
   background-size:cover;
   background-position: center;
-  
-  }
-.recipe-input {
+}
+
+.recipeInput {
   position: absolute;
   bottom: 20px; /* Adjust the bottom value as needed */
-  left: 50px; /* Adjust the left value as needed */
+  left: 70px; /* Adjust the left value as needed */
 }
   
   
@@ -92,35 +92,23 @@ body {
     }
 }
 #restaurant-container {
-<<<<<<< HEAD
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: start; /* Align items to the start of the container */
-    
-    background-image: url('store1.png');
-=======
->>>>>>> 4ed7e74e10e842376ea6405f96cfa578a36de4b3
-    padding: 20px; /* Padding inside the container */
-    border-radius: 10px; /* Rounded corners for the container */
-    box-shadow: 0 2px 4px rgba(236, 240, 242, 0.1); /* Subtle shadow for 3D effect */
-    width: 350px; /* Width for the container */
-    height: 350px;
-    position: absolute; /* Absolute positioning */
-    position: absolute;
-    top: 0;
-    left: 170px;
-    display: block; /* Change to 'none' to hide initially */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    background-size: cover; /* Ensure the image covers the whole container */
-    background-position: center; /* Center the background image */
-}
-.recipe.form {
+  padding: 10px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 2px 4px rgba(236, 240, 242, 0.1); /* Subtle shadow for 3D effect */
+  width: 350px; /* Width for the container */
+  height: 350px;
+  color: whitesmoke;
+  position: absolute; /* Absolute positioning */
   position: absolute;
-  top: 50%;
-  left: 200px;
-  transform: translate(-50%, -50%);
+  top: 0px;
+  left: 40px;
+  display: block; /* Change to 'none' to hide initially */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Ensure the image covers the whole container */
+  background-position: center; /* Center the background image */
 }
+
+
 #restaurant-container button {
     margin-top: 8px; /* Adjust this value as needed to move the button down */
     z-index: 2; 
